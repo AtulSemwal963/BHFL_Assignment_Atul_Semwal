@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 const ATUL_INFO = {
     user_id: 'atul_semwal_06092003',
@@ -147,8 +147,8 @@ app.post('/bhfl', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-    console.log(`Server running on port 3000`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app;
